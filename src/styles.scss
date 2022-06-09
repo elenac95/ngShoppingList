@@ -1,0 +1,130 @@
+@import 'variables';
+@import 'config';
+@import 'modal';
+@import 'list';
+@import 'form';
+
+.wrapper {
+    background-color: $clr-primary-300;
+    border-radius: $border-radius;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: $clr-primary-300;
+
+    .header-content {
+        @include flex-row;
+        color: $clr-text-100;
+        max-width: 50rem;
+        margin: 0 auto;
+        opacity: .65;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+#ifEmpty {
+    user-select: none;
+    max-width: 10rem;
+    margin: 0 auto;
+
+    svg {
+        fill: white;
+        opacity: .65;
+    }
+
+    p {
+        text-align: center;
+        font-size: .9rem;
+        margin-top: 1rem;
+        opacity: .65;
+    }
+
+    .btn__add {
+        cursor: pointer;
+        opacity: 1;
+        max-width: max-content;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+.btn__plus {
+    background-color: $clr-black;
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    &:hover {
+        animation: btn-plus 800ms ease infinite;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+}
+
+// ================================ MEDIA QUERIES ================================
+
+@media only screen and (max-width: 570px) {
+    .list-container .filter-menu {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .list-container.form-is-active {
+        top: 50rem;
+    }
+
+    .list-container .filter-menu {
+        width: 50%;
+    }
+
+    .form .category-container {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .list-container.form-is-active {
+        top: 50rem;
+    }
+
+    header .header-content {
+        @include flex-col;
+    }
+
+    .form-container {
+        margin: 119px auto 0 auto;
+    }
+
+    form .amount-unit {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .list-container .filter-menu {
+        width: 60%;
+    }
+
+    .form .category-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}

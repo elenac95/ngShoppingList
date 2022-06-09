@@ -1,0 +1,123 @@
+.form-container {
+    @include flex-col;
+    gap: 1rem;
+    
+    margin: 90px auto 0 auto;
+    padding: 2rem 2rem 4rem 2rem;
+    background-color: $clr-primary-300;
+    border-radius: $border-radius;
+
+    .form__heading {
+        max-width: 25rem;
+    }
+}
+
+.form {
+    @include flex-col;
+    align-items: flex-start;
+    gap: .2rem;
+    width: 100%;
+    max-width: 30rem;
+
+    label {
+        font-size: .9rem;
+        letter-spacing: 0;
+        opacity: .65;
+        margin-top: .5rem;
+    }
+
+    .warning-container {
+        height: 19px;
+    }
+
+    .warning {
+        color: rgb(255, 97, 105);
+        font-size: .85rem;
+    }
+
+    .category-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        p {
+            cursor: pointer;
+            user-select: none;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            background-color: $clr-primary-200;
+            padding: 1rem;
+            border-radius: $border-radius;
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &.selected {
+                transform: scale(1.05);
+                background-color: $clr-accent-800;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+
+    input, select {
+        width: 100%;
+        padding: .5rem;
+        font-size: 1rem;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        background-color: $clr-white;
+    }
+
+    .amount-unit {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+
+        input {
+            margin: 0;
+            width: 6rem;
+        }
+    }
+
+    .unit-group {
+        @include flex-row;
+        gap: 2rem;
+        
+        p {
+            cursor: pointer;
+            user-select: none;
+            opacity: .4;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                opacity: 1;
+                color: white;
+            }
+
+            &.selected {
+                opacity: 1;
+                font-weight: 600;
+                color: $clr-accent-200;
+            }
+        }
+    }
+
+    button {
+        @include flex-row;
+        font-weight: 600;
+        align-self: center;
+        user-select: none;
+
+        span {
+            transform: translateX(-3px);
+        }
+    }
+}

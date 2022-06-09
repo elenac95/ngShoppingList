@@ -1,0 +1,94 @@
+{
+  "entries": [
+    {
+      "title": "Apples",
+      "category": "fruit and veggies",
+      "description": "red apples",
+      "amount": 25,
+      "unit": "pc",
+      "done": false,
+      "id": 1
+    },
+    {
+      "title": "Sandwich",
+      "category": "bread",
+      "description": "whole grain",
+      "amount": 2,
+      "unit": "pc",
+      "done": false,
+      "id": 2
+    },
+    {
+      "title": "Coke",
+      "category": "drinks",
+      "description": "vanilla coke",
+      "amount": 1,
+      "unit": "liter",
+      "done": true,
+      "id": 3
+    },
+    {
+      "title": "Cat food",
+      "category": "pet supplies",
+      "description": "Whiskas",
+      "amount": 3,
+      "unit": "pc",
+      "done": true,
+      "id": 4
+    },
+    {
+      "title": "Conditioner",
+      "category": "care products",
+      "description": "Syoss",
+      "amount": 1,
+      "unit": "pc",
+      "done": false,
+      "id": 5
+    },
+    {
+      "title": "Chips",
+      "category": "snacks and sweets",
+      "description": "Paprika ",
+      "amount": 3,
+      "unit": "pc",
+      "done": false,
+      "id": 6
+    },
+    {
+      "title": "Knive",
+      "category": "other",
+      "description": "for cooking",
+      "amount": 1,
+      "unit": "pc",
+      "done": false,
+      "id": 7
+    },
+    {
+      "title": "Lettuce",
+      "category": "fruit and veggies",
+      "description": "Eisberg",
+      "amount": 1,
+      "unit": "kg",
+      "done": true,
+      "id": 8
+    },
+    {
+      "title": "Chocolate",
+      "category": "snacks and sweets",
+      "description": "strawberry chocolate",
+      "amount": 2,
+      "unit": "kg",
+      "done": false,
+      "id": 9
+    },
+    {
+      "title": "Cat litter",
+      "category": "pet supplies",
+      "description": "anti smell",
+      "amount": 5,
+      "unit": "kg",
+      "done": true,
+      "id": 10
+    }
+  ]
+}

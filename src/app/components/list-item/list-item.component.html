@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<div class="list__item" [ngClass]="{'done' : entry.done, 'active' : status == 'active'}" (click)="toggleDone()" (mouseenter)="toggleStatus()" (mouseleave)="toggleStatus()">
+    <p class="category">{{entry.category}}</p>
+    <h5 class="title">{{entry.title}}</h5>
+    <p class="desc">{{entry.description}}</p>
+    <p class="amount-unit">{{entry.amount}} {{entry.unit}}</p>
+    <span *ngIf="entry.done" class="material-symbols-outlined icon__done">check_circle</span>
+    <div class="icon-group">
+        <span (click)="onBtnDelete($event)" *ngIf="status == 'active'" class="material-symbols-outlined icon__delete">close</span>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.modal-container {
+    display: grid;
+    place-items: center;
+    background-color: transparentize($clr-black, .1);
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    .modal__content {
+        @include flex-col;
+        gap: 1rem;
+        background-color: $clr-primary-300;
+        border-radius: $border-radius;
+        padding: 2rem;
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: .65;
+        }
+
+        .btn-group {
+            @include flex-row;
+            width: 100%;
+            margin-top: 2rem;
+
+            button {
+                width: 110px;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

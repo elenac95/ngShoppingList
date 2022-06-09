@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@mixin flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+html {
+	overflow-y: scroll;
+	overflow-y: overlay;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: $clr-primary-100;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsl(0, 0%, 65%);
+    border-radius: 20px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif; 
+    letter-spacing: -0.3px;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: none;
+}
+
+body {
+    background-color: $clr-primary-300;
+    color: white;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: .4em .9em;
+    border-radius: 20rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        animation: btn-hover 800ms ease infinite;
+    }
+
+    &--primary {
+        background-color: darken($clr-accent-800, 5%);
+    }
+
+    &--secondary {
+        background-color: $clr-primary-100;
+    }
+}
+
+
+@keyframes btn-hover {
+    0% { transform: translateY(0px) }
+    60% { transform: translateY(-2px) }
+    100% { transform: translateY(0px) }
+}
+
+@keyframes btn-plus {
+    0% { transform: scale(1) }
+    60% { transform: scale(1.1) }
+    100% { transform: scale(1) }
+}

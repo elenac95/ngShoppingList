@@ -1,0 +1,47 @@
+<div class="form-container" *ngIf="status == 'active'">
+    <h3 class="form__heading">What do you need to buy?</h3>
+    <form class="form">
+        <div class="warning-container">
+            <p @fade *ngIf="warning.category != ''" class="warning">{{ warning.category }}</p>
+        </div>
+        <div class="category-container">
+            <p [ngClass]="{'selected' : selectedCategory == 'fruit and veggies'}" (click)="onCategorySelect($event)">fruit and veggies</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'snacks and sweets'}" (click)="onCategorySelect($event)">snacks and sweets</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'drinks'}" (click)="onCategorySelect($event)">drinks</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'bread'}" (click)="onCategorySelect($event)">bread</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'dairy'}" (click)="onCategorySelect($event)">dairy</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'meat and fish'}" (click)="onCategorySelect($event)">meat and fish</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'care products'}" (click)="onCategorySelect($event)">care products</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'pet supplies'}" (click)="onCategorySelect($event)">pet supplies</p>
+            <p [ngClass]="{'selected' : selectedCategory == 'other'}" (click)="onCategorySelect($event)">other</p>
+        </div>
+        <label for="titleInput">Title: *</label>
+        <input type="text" id="titleInput" autocomplete="off" name="titleInput" [(ngModel)]="model.title" (ngModelChange)="inputValidation()">
+        <div class="warning-container">
+            <p @fade *ngIf="warning.title != ''" class="warning">{{ warning.title }}</p>
+        </div>
+        <label for="descInput">Description:</label>
+        <input type="text" id="descInput" autocomplete="off" name="descInput" [(ngModel)]="model.description">
+        <div class="warning-container"></div>
+        <label for="amountInput">Amount: *</label>
+        <div class="amount-unit">
+            <input type="number" min="0" value="0" autocomplete="off" name="amountInput" [(ngModel)]="model.amount" (ngModelChange)="inputValidation()">
+            <div class="unit-group">
+                <p id="pc" [ngClass]="{'selected' : selectedUnit == 'pc'}" (click)="onUnitSelect($event)">pc</p>
+                <p id="g" [ngClass]="{'selected' : selectedUnit == 'g'}" (click)="onUnitSelect($event)">g</p>
+                <p id="kg" [ngClass]="{'selected' : selectedUnit == 'kg'}" (click)="onUnitSelect($event)">kg</p>
+                <p id="liter" [ngClass]="{'selected' : selectedUnit == 'liter'}" (click)="onUnitSelect($event)">liter</p>
+            </div>
+        </div>
+        <div class="warning-container">
+            <p @fade *ngIf="warning.amount != ''" class="warning">{{ warning.amount }}</p>
+        </div>
+        <div class="warning-container">
+            <p @fade *ngIf="warning.unit != ''" class="warning">{{ warning.unit }}</p>
+        </div>
+        <button class="btn btn--primary" (click)="onBtnAdd()">
+            <span class="material-symbols-outlined">add</span>
+            add to list
+        </button>
+    </form>
+</div>

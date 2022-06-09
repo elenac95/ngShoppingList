@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <app-form (onBtnAddToListEvent)="addEntry($event)"></app-form>
+    <app-list 
+    [isFormActive]="isFormActive"
+    [list]="apiData"
+    (onBtnAddEvent)="isFormActive = true" 
+    (onArrowUpEvent)="isFormActive = false" 
+    (onArrowDownEvent)="isFormActive = true"
+    (onBtnDeleteAllEvent)="isModalActive = true"
+    (onBtnDeleteEntryEvent)="removeEntry($event)">
+    </app-list>
+    <app-btn-plus (onBtnPlusEvent)="isFormActive = true"></app-btn-plus>
+</div>
+<app-modal 
+[active]="isModalActive"
+(onBtnCancelEvent)="isModalActive = false"
+(onBtnOkEvent)="deleteAll()">
+</app-modal>

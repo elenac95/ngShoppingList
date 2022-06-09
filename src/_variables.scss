@@ -1,0 +1,20 @@
+$clr-primary-100: rgb(65, 94, 121);
+$clr-primary-200: darken($clr-primary-100, 10%);
+$clr-primary-300: darken($clr-primary-100, 15%);
+$clr-secondary-300: rgb(31, 158, 158);
+$clr-secondary-100: transparentize($clr-secondary-300, .8);
+$clr-accent-200: rgb(75, 236, 236);
+$clr-accent-400: rgb(76, 219, 219);
+$clr-accent-600: darken($clr-accent-400, 10%);
+$clr-accent-800: darken($clr-accent-400, 20%);
+$clr-white: rgb(243, 243, 243);
+$clr-black: rgb(20, 20, 27);
+
+$clr-text-900: #333;
+$clr-text-100: white;
+
+$shadow-light: 0 0 10px rgba(0, 0, 0, .2);
+$card-width: 18rem;
+$card-height: calc(18rem * 1.618);
+$border-radius: 10px;
+$header-height: 5rem;
